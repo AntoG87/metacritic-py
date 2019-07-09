@@ -35,8 +35,7 @@ First, import the library:
 
 To search all the games including a particular string use the Search method. The example below shows all the games including the string 'batman':
 
-.. code-block:: python
-
+```python
     >>> s = mc.Search()
     >>> games = s.games('batman')
     >>> games
@@ -50,12 +49,12 @@ To search all the games including a particular string use the Search method. The
     'Batman: The Enemy Within - Episode 4: What Ails You': 'batman-the-enemy-within---episode-4-what-ails-you',
     'Batman: Arkham Knight - Season of Infamy: Most Wanted': 'batman-arkham-knight---season-of-infamy-most-wanted',
     'Batman: The Enemy Within - Episode 1: The Enigma': 'batman-the-enemy-within---episode-1-the-enigma'}}
-   
+```
+
 Once we have retrieved the desired game, we pick the slug (e.g. 'batman-return-to-arkham' for 'Batman: Return to Arkham') and we use the method info of the class Games to retrieve the general information.
 You can then access to the a particular attribute as shown in the example below:
 
-.. code-block:: python
-
+```python
     >>> games = mc.Games('batman-return-to-arkham')
     >>> game = games.info()
     {'title': 'Batman: Return to Arkham',
@@ -66,11 +65,11 @@ You can then access to the a particular attribute as shown in the example below:
     'release_date': 'Oct 18, 2016'}
     >>> game['scores']['critics']
     '73'
-    
+```
+
 Finally, you can retrieve all the users' reviews, which are stored in a list:
 
-.. code-block:: python
-
+```python
     >>> reviews = game.user_reviews()
     [('Oct 20, 2016', '8'),
     ('Oct 29, 2016', '8'),
@@ -90,14 +89,15 @@ Finally, you can retrieve all the users' reviews, which are stored in a list:
     ('Nov 14, 2018', '8'),
     ('Oct 19, 2017', '10'),
     ('Jun 22, 2019', '1')]
+```
 
 You can use the dates and single scores to calculated useful distribution and statistics to gain additional insight on how the game is being reviewed by gamers. 
 
 All the methods shown so far can work if the user is behind a proxy. All you have to do is instantiatin a proxy and pass it to the methods as demonstrated in the example below:
 
-.. code-block:: python
-    
+```python    
     >>> proxies = {'http': 'http://my-proxy/', 'https': 'https://my-proxy/'}
     >>> games = s.games('batman', proxies=proxies)
     >>> game = games.info(proxies=proxies)
     >>> reviews = game.user_reviews(proxies=proxies)
+```
