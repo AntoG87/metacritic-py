@@ -18,7 +18,8 @@ Installation
 
 You can install *metacriticapi* using one of the following methods:
 
-- Use pip: pip install git+https://github.com/AntoG87/metacriticapi.git
+- Use pip: 
+```pip install git+https://github.com/AntoG87/metacriticapi.git```
 - Download the `source from Github`_ and install it yourself. In this case use the following command to install the libraries included in the requirements.txt text file:
 ```
 pip install -r https://github.com/AntoG87/metacriticapi/master/requirements.txt
