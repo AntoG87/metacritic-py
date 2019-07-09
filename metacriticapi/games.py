@@ -57,13 +57,7 @@ class Games(Metacritic):
         review_votes = self._apply_xpath_query('user_reviews', 'vote', html)
         return review_votes   
 
-    def info(self, **kwargs):
-        """
-        Get the basic movie information for a specific game
-
-        Returns:
-        A dict representation of the main info
-        """
+    def info(self, **kwargs):        
         path = self._get_slug_path('info')
         slug_html = self._GET(path, kwargs)
         product_details = self._get_product_details(slug_html)

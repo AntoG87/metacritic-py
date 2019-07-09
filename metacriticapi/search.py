@@ -11,7 +11,7 @@ class Search(Metacritic):
         games = self._apply_xpath_query('results', 'games', html)
         return games
 
-    def games(self, query='', **kwargs):
+    def games(self, query='', **kwargs):        
         self.slug = query
         path = self._get_slug_path('search')
         slug_html = self._GET(path, kwargs)

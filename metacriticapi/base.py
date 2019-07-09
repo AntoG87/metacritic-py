@@ -2,9 +2,7 @@ from lxml import etree
 import requests
  
 class Metacritic(object):
-    """
-    Provides an abstract base class to retrieve betting odds and results
-    """    
+    
     URLs = {}
     XPATH_QUERIES = {}
 
