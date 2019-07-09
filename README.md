@@ -29,9 +29,9 @@ How it works
 ------------
 First, import the library:
 
-.. code-block:: python
-
+```python
     >>> import metacriticapi as mc
+```
 
 To search all the games including a particular string use the Search method. The example below shows all the games including the string 'batman':
 
